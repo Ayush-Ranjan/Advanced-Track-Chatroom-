@@ -271,6 +271,7 @@ class ClientHandler implements Runnable
 				ClientHandler mc = id.ar.get(x);
                     		if ((mc.name.equals(recipient)||recipient.equals("all")) && mc.isloggedin==true)  
                     		{ 
+					if(!mc.name.equals(this.name))
                         		mc.dos.writeUTF(this.name+" : "+MsgToSend);
                     		}
 			} 
